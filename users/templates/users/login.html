@@ -1,7 +1,8 @@
-<!-- users/templates/users/login.html -->
-<h2>Login</h2>
-<form method="post">
+<!-- login.html -->
+<form method="POST">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
+    <!-- Your form fields here -->
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <button type="submit">Log In</button>
 </form>

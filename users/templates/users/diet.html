@@ -1,0 +1,51 @@
+<!-- users/diet.html -->
+{% extends 'users/base.html' %}
+
+{% block content %}
+<h2>Your Diet</h2>
+
+<!-- Diet Log Table -->
+<h3>Your Meal Log</h3>
+<table style="width: 100%; border: 1px solid #ddd; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="padding: 8px; text-align: left;">Meal</th>
+            <th style="padding: 8px; text-align: left;">Calories</th>
+            <th style="padding: 8px; text-align: left;">Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="padding: 8px;">Breakfast</td>
+            <td style="padding: 8px;">350</td>
+            <td style="padding: 8px;">8:00 AM</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px;">Lunch</td>
+            <td style="padding: 8px;">600</td>
+            <td style="padding: 8px;">12:00 PM</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px;">Dinner</td>
+            <td style="padding: 8px;">450</td>
+            <td style="padding: 8px;">7:00 PM</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Meal Entry Form -->
+<h3>Add New Meal</h3>
+<form action="#" method="POST">
+    {% csrf_token %}
+    <label for="meal_name">Meal Name:</label><br>
+    <input type="text" id="meal_name" name="meal_name" placeholder="e.g., Breakfast" style="width: 100%; padding: 10px;"><br><br>
+
+    <label for="calories">Calories:</label><br>
+    <input type="number" id="calories" name="calories" placeholder="e.g., 350" style="width: 100%; padding: 10px;"><br><br>
+
+    <label for="meal_time">Meal Time:</label><br>
+    <input type="time" id="meal_time" name="meal_time" style="padding: 10px;"><br><br>
+
+    <input type="submit" value="Add Meal" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer;">
+</form>
+{% endblock %}

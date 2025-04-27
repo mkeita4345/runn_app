@@ -1,0 +1,52 @@
+<!-- users/run_tracking.html -->
+{% extends 'users/base.html' %}
+
+{% block content %}
+<h2>Your Run Tracking</h2>
+
+<!-- Run Log Table -->
+<h3>Your Run History</h3>
+<table style="width: 100%; border: 1px solid #ddd; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="padding: 8px; text-align: left;">Date</th>
+            <th style="padding: 8px; text-align: left;">Distance (km)</th>
+            <th style="padding: 8px; text-align: left;">Time</th>
+            <th style="padding: 8px; text-align: left;">Pace (min/km)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="padding: 8px;">2023-04-01</td>
+            <td style="padding: 8px;">5</td>
+            <td style="padding: 8px;">30:00</td>
+            <td style="padding: 8px;">6:00</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px;">2023-04-03</td>
+            <td style="padding: 8px;">8</td>
+            <td style="padding: 8px;">45:00</td>
+            <td style="padding: 8px;">5:40</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Run Entry Form -->
+<h3>Log Your Run</h3>
+<form action="#" method="POST">
+    {% csrf_token %}
+    <label for="run_date">Date:</label><br>
+    <input type="date" id="run_date" name="run_date" style="width: 100%; padding: 10px;"><br><br>
+
+    <label for="distance">Distance (km):</label><br>
+    <input type="number" id="distance" name="distance" placeholder="e.g., 5" style="width: 100%; padding: 10px;"><br><br>
+
+    <label for="time">Time (hh:mm):</label><br>
+    <input type="time" id="time" name="time" style="width: 100%; padding: 10px;"><br><br>
+
+    <label for="pace">Pace (min/km):</label><br>
+    <input type="text" id="pace" name="pace" placeholder="e.g., 6:00" style="width: 100%; padding: 10px;"><br><br>
+
+    <input type="submit" value="Log Run" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer;">
+</form>
+{% endblock %}

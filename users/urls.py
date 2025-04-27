@@ -8,5 +8,8 @@ urlpatterns = [
     path('logout/', views.logout_view, name='logout'),
     path('register/', views.register_view, name='register'),
     path('home/', views.home_view, name='home'),  # <-- ADD THIS
+path('diet/', views.diet_page, name='diet_page'),
+    path('run_tracking/', views.run_tracking_page, name='run_tracking_page'),
+    path('connect/', views.connect_page, name='connect_page'),
 ]
 

@@ -1,0 +1,37 @@
+<!-- users/connect.html -->
+{% extends 'users/base.html' %}
+
+{% block content %}
+<h2>Connect with Others</h2>
+
+<!-- User List -->
+<h3>Users to Connect With</h3>
+<table style="width: 100%; border: 1px solid #ddd; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="padding: 8px; text-align: left;">Username</th>
+            <th style="padding: 8px; text-align: left;">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="padding: 8px;">user1</td>
+            <td style="padding: 8px;"><button style="padding: 8px 16px; background-color: #4CAF50; color: white; border: none; cursor: pointer;">Connect</button></td>
+        </tr>
+        <tr>
+            <td style="padding: 8px;">user2</td>
+            <td style="padding: 8px;"><button style="padding: 8px 16px; background-color: #4CAF50; color: white; border: none; cursor: pointer;">Connect</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Message Form -->
+<h3>Send a Message</h3>
+<form action="#" method="POST">
+    {% csrf_token %}
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" style="width: 100%; padding: 10px;"></textarea><br><br>
+
+    <input type="submit" value="Send Message" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer;">
+</form>
+{% endblock %}

@@ -1,5 +1,35 @@
 <!-- users/templates/users/home.html -->
+<html>
+<head>
+    <title>Run App</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Run App</a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'diet_page' %}">Diet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'run_tracking_page' %}">Track Run</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'connect_page' %}">Connect</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="{% url 'logout' %}">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-<h1>Welcome to the Run App!</h1>
-<p>You are logged in.</p>
-<a href="{% url 'logout' %}">Logout</a>
+    <!-- Main Content Section -->
+    <div class="container mt-4">
+        <!-- Welcome Message -->
+        <h1>Welcome to the Run App!</h1>
+        <p>You
+

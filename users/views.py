@@ -31,3 +31,21 @@ def logout_view(request):
 @login_required
 def home_view(request):
     return render(request, 'users/home.html')
+
+def profile_view(request):
+    return render(request, 'users/profile.html', {'user': request.user})
+
+# Diet Page
+@login_required
+def diet_page(request):
+    return render(request, 'users/diet.html')
+
+# Run Tracking Page
+@login_required
+def run_tracking_page(request):
+    return render(request, 'users/run_tracking.html')
+
+# Social Connection Page
+@login_required
+def connect_page(request):
+    return render(request, 'users/connect.html')
