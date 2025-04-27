@@ -5,7 +5,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 from .models import Diet
 from django.shortcuts import render, redirect
-
+from django.http import JsonResponse
 
 def register_view(request):
     if request.method == 'POST':
